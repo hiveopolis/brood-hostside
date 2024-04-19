@@ -1,0 +1,3 @@
+influxdb-client>=1.36  # via pip3 (not in default apt repo)
+numpy
+pyserial>=3.4
