@@ -1,309 +1,364 @@
+
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="lang:clipboard.copy" content="Copy to clipboard">
-  <meta name="lang:clipboard.copied" content="Copied to clipboard">
-  <meta name="lang:search.language" content="en">
-  <meta name="lang:search.pipeline.stopwords" content="True">
-  <meta name="lang:search.pipeline.trimmer" content="True">
-  <meta name="lang:search.result.none" content="No matching documents">
-  <meta name="lang:search.result.one" content="1 matching document">
-  <meta name="lang:search.result.other" content="# matching documents">
-  <meta name="lang:search.tokenizer" content="[\s\-]+">
-
-  
-    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
-
-    <style>
-      body,
-      input {
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
-      }
-
-      code,
-      kbd,
-      pre {
-        font-family: "Roboto Mono", "Courier New", Courier, monospace
-      }
-    </style>
-  
-
-  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
-  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
-  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
-  
-  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
-  
-  <meta name="theme-color" content="#3f51b5">
-  <script src="_static/javascripts/modernizr.js"></script>
-  
-  
-  
     <title>Documentation for ho-brood-hostside &#8212; ho-brood-hostside  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=83e35b93" />
-    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
   
-   
-
-  </head>
-  <body dir=ltr
-        data-md-color-primary=blue-grey data-md-color-accent=blue>
   
-  <svg class="md-svg">
-    <defs data-children-count="0">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-      
-    </defs>
-  </svg>
   
-  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
-  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
-  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#index" tabindex="1" class="md-skip"> Skip to content </a>
-  <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex navheader">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="#" title="ho-brood-hostside  documentation"
-           class="md-header-nav__button md-logo">
-          
-            &nbsp;
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">ho-brood-hostside  documentation</span>
-          <span class="md-header-nav__topic"> Documentation for ho-brood-hostside </span>
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-        
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" action="search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder=""Search""
-             autocapitalize="off" autocomplete="off" spellcheck="false"
-             data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-      
-      
-  
-  <script src="_static/javascripts/version_dropdown.js"></script>
-  <script>
-    var json_loc = ""versions.json"",
-        target_loc = "../",
-        text = "Versions";
-    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
-
-    </div>
-  </nav>
-</header>
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <div class="md-container">
-    
-    
-    
-  <nav class="md-tabs" data-md-component="tabs">
-    <div class="md-tabs__inner md-grid">
-      <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="#" class="md-tabs__link">ho-brood-hostside  documentation</a></li>
-      </ul>
-    </div>
-  </nav>
-    <main class="md-main">
-      <div class="md-main__inner md-grid" data-md-component="container">
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
-          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="#" title="ho-brood-hostside documentation" class="md-nav__button md-logo">
-      
-        <img src="_static/" alt=" logo" width="48" height="48">
-      
-    </a>
-    <a href="#"
-       title="ho-brood-hostside documentation">ho-brood-hostside  documentation</a>
-  </label>
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
   
 
-</nav>
-              </div>
-            </div>
-          </div>
-          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                
-<nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc">"Contents"</label>
-  <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#index--page-root" class="md-nav__link">Documentation for ho-brood-hostside</a>
-        </li>
-        <li class="md-nav__item"><a href="#quickstart" class="md-nav__link">Quickstart</a>
-        </li>
-        <li class="md-nav__item"><a href="#key-classes" class="md-nav__link">Key classes</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#libabc-abchandle" class="md-nav__link">libabc – ABCHandle</a>
-        </li>
-        <li class="md-nav__item"><a href="#libabc-exceptions" class="md-nav__link">libabc – exceptions</a>
-        </li>
-        <li class="md-nav__item"><a href="#libabc-other-functionality" class="md-nav__link">libabc – other functionality</a>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#support-classes" class="md-nav__link">Support classes</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#module-brood_hostside.liblog" class="md-nav__link">Logging library</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#brood_hostside.liblog.get_heater_field_keys" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">get_heater_field_keys()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.liblog.ABCLogger" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCLogger</span></code></a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#brood_hostside.liblog.ABCLogger.init_logfiles" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCLogger.init_logfiles()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.liblog.ABCLogger.reinit" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCLogger.reinit()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.liblog.ABCLogger.logline" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCLogger.logline()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.liblog.ABCLogger.logdatalst" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCLogger.logdatalst()</span></code></a>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#user-interface-wrappers-libui" class="md-nav__link">User interface wrappers – <strong>libui</strong></a>
-        </li>
-        <li class="md-nav__item"><a href="#database-interaction-libdb" class="md-nav__link">Database interaction – <strong>libdb</strong></a>
-        </li>
-        <li class="md-nav__item"><a href="#module-brood_hostside.libbase" class="md-nav__link">Baseclass – <strong>libbase</strong></a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase</span></code></a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.utcnow" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.utcnow()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.get_dt_day" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.get_dt_day()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.dt_to_isofmt" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.dt_to_isofmt()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.dt_to_unix" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.dt_to_unix()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.ftime" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.ftime()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.timestamp4db" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.timestamp4db()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.parse_boardname" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.parse_boardname()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.safename" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.safename()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.lookfor_cfgfile" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.lookfor_cfgfile()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.ABCBase.git_info_str" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ABCBase.git_info_str()</span></code></a>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.BackoffCtr" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">BackoffCtr</span></code></a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.BackoffCtr.hitok" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">BackoffCtr.hitok()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#brood_hostside.libbase.BackoffCtr.hitwarn" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">BackoffCtr.hitwarn()</span></code></a>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#usage-notes-for-library" class="md-nav__link">Usage notes for library</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#basic-usage-for-prototyping" class="md-nav__link">Basic usage for prototyping</a>
-        </li>
-        <li class="md-nav__item"><a href="#some-quick-notes-about-screen" class="md-nav__link">Some quick notes about <cite>screen</cite>:</a>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#some-developer-notes" class="md-nav__link">Some developer notes</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#requirements" class="md-nav__link">Requirements</a>
-        </li>
-        <li class="md-nav__item"><a href="#database-setup" class="md-nav__link">Database setup</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#links-to-docs" class="md-nav__link">## Links to docs</a>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#python-version" class="md-nav__link">Python version</a>
-        </li>
-        <li class="md-nav__item"><a href="#some-open-issues" class="md-nav__link">Some open issues</a>
-        </li>
-        <li class="md-nav__item"><a href="#citation" class="md-nav__link">Citation</a>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#indices-and-tables" class="md-nav__link">Indices and tables</a>
-        </li>
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/index.rst.txt">Show Source</a> </li>
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ho-brood-hostside  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-<li id="searchbox" class="md-nav__item"></li>
 
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-</nav>
-              </div>
-            </div>
-          </div>
-        
-        <div class="md-content">
-          <article class="md-content__inner md-typeset" role="main">
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Documentation for ho-brood-hostside</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Documentation for ho-brood-hostside</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#key-classes">Key classes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libabc-abchandle">libabc – ABCHandle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libabc-exceptions">libabc – exceptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libabc-other-functionality">libabc – other functionality</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#support-classes">Support classes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-brood_hostside.liblog">Logging library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.get_heater_field_keys"><code class="docutils literal notranslate"><span class="pre">get_heater_field_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger"><code class="docutils literal notranslate"><span class="pre">ABCLogger</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.init_logfiles"><code class="docutils literal notranslate"><span class="pre">ABCLogger.init_logfiles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.reinit"><code class="docutils literal notranslate"><span class="pre">ABCLogger.reinit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.logline"><code class="docutils literal notranslate"><span class="pre">ABCLogger.logline()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.logdatalst"><code class="docutils literal notranslate"><span class="pre">ABCLogger.logdatalst()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-interface-wrappers-libui">User interface wrappers – <strong>libui</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-interaction-libdb">Database interaction – <strong>libdb</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-brood_hostside.libbase">Baseclass – <strong>libbase</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase"><code class="docutils literal notranslate"><span class="pre">ABCBase</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.utcnow"><code class="docutils literal notranslate"><span class="pre">ABCBase.utcnow()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.get_dt_day"><code class="docutils literal notranslate"><span class="pre">ABCBase.get_dt_day()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.dt_to_isofmt"><code class="docutils literal notranslate"><span class="pre">ABCBase.dt_to_isofmt()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.dt_to_unix"><code class="docutils literal notranslate"><span class="pre">ABCBase.dt_to_unix()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.ftime"><code class="docutils literal notranslate"><span class="pre">ABCBase.ftime()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.timestamp4db"><code class="docutils literal notranslate"><span class="pre">ABCBase.timestamp4db()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.parse_boardname"><code class="docutils literal notranslate"><span class="pre">ABCBase.parse_boardname()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.safename"><code class="docutils literal notranslate"><span class="pre">ABCBase.safename()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.lookfor_cfgfile"><code class="docutils literal notranslate"><span class="pre">ABCBase.lookfor_cfgfile()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.git_info_str"><code class="docutils literal notranslate"><span class="pre">ABCBase.git_info_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.BackoffCtr"><code class="docutils literal notranslate"><span class="pre">BackoffCtr</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.BackoffCtr.hitok"><code class="docutils literal notranslate"><span class="pre">BackoffCtr.hitok()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.BackoffCtr.hitwarn"><code class="docutils literal notranslate"><span class="pre">BackoffCtr.hitwarn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-notes-for-library">Usage notes for library</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage-for-prototyping">Basic usage for prototyping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-quick-notes-about-screen">Some quick notes about <cite>screen</cite>:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-developer-notes">Some developer notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-setup">Database setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-docs">## Links to docs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-version">Python version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-open-issues">Some open issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="documentation-for-ho-brood-hostside">
-<h1 id="index--page-root">Documentation for ho-brood-hostside<a class="headerlink" href="#index--page-root" title="Permalink to this heading">¶</a></h1>
+<h1>Documentation for ho-brood-hostside<a class="headerlink" href="#documentation-for-ho-brood-hostside" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 </section>
 <section id="quickstart">
-<h1 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">¶</a></h1>
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h1>
 <p>Assuming that you are running the robot in conjunction with a RPi, running raspian or similar:</p>
 <ol class="arabic simple">
 <li><p>Install binary dependencies</p></li>
@@ -328,38 +383,39 @@
 <p><cite>python3 abc_run.py -c cfg/example.cfg</cite></p>
 </section>
 <section id="key-classes">
-<h1 id="key-classes">Key classes<a class="headerlink" href="#key-classes" title="Permalink to this heading">¶</a></h1>
+<h1>Key classes<a class="headerlink" href="#key-classes" title="Permalink to this heading">#</a></h1>
 <section id="libabc-abchandle">
-<h2 id="libabc-abchandle">libabc – ABCHandle<a class="headerlink" href="#libabc-abchandle" title="Permalink to this heading">¶</a></h2>
+<h2>libabc – ABCHandle<a class="headerlink" href="#libabc-abchandle" title="Permalink to this heading">#</a></h2>
 <p>The primary class used to interact with the broodnest robotic frame is
 <cite>libabc.ABCHandle</cite>.  This provides the top-level entry point to a robot module,
 facilitating the acquisition of samples from all sensors, as well as
 configuration, and actuator control.</p>
 </section>
 <section id="libabc-exceptions">
-<h2 id="libabc-exceptions">libabc – exceptions<a class="headerlink" href="#libabc-exceptions" title="Permalink to this heading">¶</a></h2>
+<h2>libabc – exceptions<a class="headerlink" href="#libabc-exceptions" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="libabc-other-functionality">
-<h2 id="libabc-other-functionality">libabc – other functionality<a class="headerlink" href="#libabc-other-functionality" title="Permalink to this heading">¶</a></h2>
+<h2>libabc – other functionality<a class="headerlink" href="#libabc-other-functionality" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 <section id="support-classes">
-<h1 id="support-classes">Support classes<a class="headerlink" href="#support-classes" title="Permalink to this heading">¶</a></h1>
+<h1>Support classes<a class="headerlink" href="#support-classes" title="Permalink to this heading">#</a></h1>
 <p>The functionality of <cite>brood_hostside</cite> is divided into several modules, which
 implement other classes or supporting functions used to interact with the
 broodnest robotic frame.  Most of these libraries are back-end, instantiated by
 <cite>libabc.ABCHandle</cite>, but users do not need to be overly concerned with the
 details.</p>
 <section id="module-brood_hostside.liblog">
-<span id="logging-library"></span><h2 id="module-brood_hostside.liblog">Logging library<a class="headerlink" href="#module-brood_hostside.liblog" title="Permalink to this heading">¶</a></h2>
+<span id="logging-library"></span><h2>Logging library<a class="headerlink" href="#module-brood_hostside.liblog" title="Permalink to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="brood_hostside.liblog.get_heater_field_keys">
-<span class="sig-prename descclassname"><span class="pre">brood_hostside.liblog.</span></span><span class="sig-name descname"><span class="pre">get_heater_field_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_heaters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#brood_hostside.liblog.get_heater_field_keys" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">brood_hostside.liblog.</span></span><span class="sig-name descname"><span class="pre">get_heater_field_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_heaters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#brood_hostside.liblog.get_heater_field_keys" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate the header for the heater csv.</p>
 </dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="brood_hostside.liblog.ABCLogger">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brood_hostside.liblog.</span></span><span class="sig-name descname"><span class="pre">ABCLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_cfg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brood_hostside.liblog.</span></span><span class="sig-name descname"><span class="pre">ABCLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_cfg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger" title="Permalink to this definition">#</a></dt>
 <dd><p>Logger for broodnest interactions.</p>
 <p>Log files are written to the folder <cite>logroot</cite> (specified in the
 configfile), e.g. “/home/pi/log/abc_logs/” as of writing.</p>
@@ -379,19 +435,21 @@ created. New CSV files are initialized with a header.</p>
 <p>This class is agnostic of rollover-intervals (as of now).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.liblog.ABCLogger.init_logfiles">
-<span class="sig-name descname"><span class="pre">init_logfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">create_msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.init_logfiles" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_logfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">create_msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.init_logfiles" title="Permalink to this definition">#</a></dt>
 <dd><p>Initialize the logfiles.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.liblog.ABCLogger.reinit">
-<span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.reinit" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reinit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.reinit" title="Permalink to this definition">#</a></dt>
 <dd><p>Reinitialize all logfiles after a rollover.</p>
 <p>The path <cite>self.logroot</cite> (<cite>==self.path_log</cite>) does not change,
 so there is no need to reinitialize it.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.liblog.ABCLogger.logline">
-<span class="sig-name descname"><span class="pre">logline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INF'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.logline" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">logline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INF'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.logline" title="Permalink to this definition">#</a></dt>
 <dd><p>Writes <cite>msg</cite> to the logfile, including some metadata.</p>
 <p>The formatted output uses <cite>|</cite> as the separator, and includes:
 - a three-letter code indicating the severity or other info (e.g. ERR)
@@ -399,43 +457,48 @@ so there is no need to reinitialize it.</p>
 - a human-readable timestamp (iso8601) [e.g. 2021-11-05T21:53:11Z]
 - the message itself, which could in principle contain further separators</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.liblog.ABCLogger.logdatalst">
-<span class="sig-name descname"><span class="pre">logdatalst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.logdatalst" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">logdatalst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.liblog.ABCLogger.logdatalst" title="Permalink to this definition">#</a></dt>
 <dd><p>Log data from list into csv form.</p>
 <p>If add_date is set, also add a UTC unix timestamp at the start.</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 <section id="user-interface-wrappers-libui">
-<h2 id="user-interface-wrappers-libui">User interface wrappers – <strong>libui</strong><a class="headerlink" href="#user-interface-wrappers-libui" title="Permalink to this heading">¶</a></h2>
+<h2>User interface wrappers – <strong>libui</strong><a class="headerlink" href="#user-interface-wrappers-libui" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="database-interaction-libdb">
-<h2 id="database-interaction-libdb">Database interaction – <strong>libdb</strong><a class="headerlink" href="#database-interaction-libdb" title="Permalink to this heading">¶</a></h2>
+<h2>Database interaction – <strong>libdb</strong><a class="headerlink" href="#database-interaction-libdb" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="module-brood_hostside.libbase">
-<span id="baseclass-libbase"></span><h2 id="module-brood_hostside.libbase">Baseclass – <strong>libbase</strong><a class="headerlink" href="#module-brood_hostside.libbase" title="Permalink to this heading">¶</a></h2>
+<span id="baseclass-libbase"></span><h2>Baseclass – <strong>libbase</strong><a class="headerlink" href="#module-brood_hostside.libbase" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brood_hostside.libbase.</span></span><span class="sig-name descname"><span class="pre">ABCBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.ABCBase" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brood_hostside.libbase.</span></span><span class="sig-name descname"><span class="pre">ABCBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.ABCBase" title="Permalink to this definition">#</a></dt>
 <dd><p>Provide basic functionalities for the ABC classes.</p>
 <p>Contains all basic time functions as well as hostname-
 related methods.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.utcnow">
-<span class="sig-name descname"><span class="pre">utcnow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.utcnow" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">utcnow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.utcnow" title="Permalink to this definition">#</a></dt>
 <dd><p>Return TZ-aware datetime object of current time.</p>
 <p>Use this wrapper to ensure consistent use of
 timestamps throughout logs.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.get_dt_day">
-<span class="sig-name descname"><span class="pre">get_dt_day</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">datetime</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.get_dt_day" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_dt_day</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.get_dt_day" title="Permalink to this definition">#</a></dt>
 <dd><p>Return datetime object of the day at midnight.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.dt_to_isofmt">
-<span class="sig-name descname"><span class="pre">dt_to_isofmt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abbrev_utc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.dt_to_isofmt" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">dt_to_isofmt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abbrev_utc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.dt_to_isofmt" title="Permalink to this definition">#</a></dt>
 <dd><p>Format datetime object <cite>dt</cite> as per ISO8601 / rfc3339 format.</p>
 <ul class="simple">
 <li><p>dt should be tz-aware</p></li>
@@ -445,21 +508,24 @@ timestamps throughout logs.</p>
 in the special case of UTC we use the shorter ‘Z’ notation
 2021-08-12T11:43:05Z</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.dt_to_unix">
-<span class="sig-name descname"><span class="pre">dt_to_unix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.dt_to_unix" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">dt_to_unix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.dt_to_unix" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert datetime object <cite>dt</cite> to a unix timestamp in seconds.</p>
 <p>Returns the timestamp as UTC - so long as <cite>dt</cite> is aware.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.ftime">
-<span class="sig-name descname"><span class="pre">ftime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.ftime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ftime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.ftime" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate HH:MM:SS representation of a datetime <cite>t</cite>.</p>
 <p>if no arg is supplied, generate current (UTC) time.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.timestamp4db">
-<span class="sig-name descname"><span class="pre">timestamp4db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.timestamp4db" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">timestamp4db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.timestamp4db" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert datetime to influxDB-format.</p>
 <dl class="simple">
 <dt>Assumes input of a TZ-aware datetime object</dt><dd><p>a unix timestamp (sec since 1970),</p>
@@ -467,9 +533,10 @@ in the special case of UTC we use the shorter ‘Z’ notation
 </dl>
 <p>generates UTC timestamp of iso-8601 format</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.parse_boardname">
-<span class="sig-name descname"><span class="pre">parse_boardname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.parse_boardname" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parse_boardname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.parse_boardname" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the board name from the <cite>addr</cite> string.</p>
 <p>The expected boardname, if udev rules are installed correctly is:
 /dev/abc01 (current version of rules)
@@ -481,9 +548,10 @@ in the special case of UTC we use the shorter ‘Z’ notation
 <p>/dev/cu.usbmodem?? (macOS)</p>
 <p>–&gt; method will yield <cite>cu.usbmodem11</cite></p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.safename">
-<span class="sig-name descname"><span class="pre">safename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'file'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.safename" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">safename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'file'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.safename" title="Permalink to this definition">#</a></dt>
 <dd><p>Append stuff to a file or folder if it already exists.</p>
 <p>Check whether a given file or folder ‘s’ exists, return a non-existing
 filename.</p>
@@ -493,9 +561,10 @@ p_type … ‘file’ or ‘f’ for files,
 <p>Returns a file- or pathname that is supposedly safe to save
 without overwriting data.</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.lookfor_cfgfile">
-<span class="sig-name descname"><span class="pre">lookfor_cfgfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.lookfor_cfgfile" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">lookfor_cfgfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Path</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.lookfor_cfgfile" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the location of the config file.</p>
 <p>Default location is ‘&lt;dir of tool&gt;/cfg’.
 Expected filename pattern is &lt;pth&gt;/&lt;hostname&gt;[.somext],
@@ -504,41 +573,47 @@ required.</p>
 <p>File default pattern is <cite>hostname</cite>.</p>
 <p>Returns a Path object, or None if not found</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.git_info_str">
-<span class="sig-name descname"><span class="pre">git_info_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.git_info_str" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">git_info_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.git_info_str" title="Permalink to this definition">#</a></dt>
 <dd><p>look up git repository info (branch, commit, clean/dirty state)</p>
 </dd></dl>
+
 </dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="brood_hostside.libbase.BackoffCtr">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brood_hostside.libbase.</span></span><span class="sig-name descname"><span class="pre">BackoffCtr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">per_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.BackoffCtr" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">brood_hostside.libbase.</span></span><span class="sig-name descname"><span class="pre">BackoffCtr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">per_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.BackoffCtr" title="Permalink to this definition">#</a></dt>
 <dd><p>Counter to increase duration between yielding True</p>
 <p>It could be used to help emitting messages only infrequently if the same
 action occurs repeatedly.</p>
 <p>By default, it implements an exponential increase in between messages.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.BackoffCtr.hitok">
-<span class="sig-name descname"><span class="pre">hitok</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.BackoffCtr.hitok" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">hitok</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.BackoffCtr.hitok" title="Permalink to this definition">#</a></dt>
 <dd><p>tell the counter the condition was ok</p>
 </dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.BackoffCtr.hitwarn">
-<span class="sig-name descname"><span class="pre">hitwarn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.BackoffCtr.hitwarn" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">hitwarn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brood_hostside.libbase.BackoffCtr.hitwarn" title="Permalink to this definition">#</a></dt>
 <dd><p>increment counter and tell the counter the condition was bad</p>
 </dd></dl>
+
 </dd></dl>
+
 </section>
 </section>
 <section id="usage-notes-for-library">
-<h1 id="usage-notes-for-library">Usage notes for library<a class="headerlink" href="#usage-notes-for-library" title="Permalink to this heading">¶</a></h1>
+<h1>Usage notes for library<a class="headerlink" href="#usage-notes-for-library" title="Permalink to this heading">#</a></h1>
 <p>The package is well managed using systemd service units, and automatic selection
 of configuration files (implemented via hostname lookup).  However, if one
 desires a simpler interaction, e.g. for prototyping a new controller, it is
 possible to run the code directly on a host. For session persistence, we suggest
 using <cite>screen</cite> or <cite>tmux</cite>.</p>
 <section id="basic-usage-for-prototyping">
-<h2 id="basic-usage-for-prototyping">Basic usage for prototyping<a class="headerlink" href="#basic-usage-for-prototyping" title="Permalink to this heading">¶</a></h2>
+<h2>Basic usage for prototyping<a class="headerlink" href="#basic-usage-for-prototyping" title="Permalink to this heading">#</a></h2>
 <p>Typically run this inside a screen or tmux session</p>
 <p><code class="docutils literal notranslate"><span class="pre">`bash</span>
 <span class="pre">#</span> <span class="pre">login</span> <span class="pre">to</span> <span class="pre">host</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">robotic</span> <span class="pre">frame</span> <span class="pre">attached</span>
@@ -552,7 +627,7 @@ using <cite>screen</cite> or <cite>tmux</cite>.</p>
 <p>Stop recording with &lt;kbd&gt;ctrl-C&lt;/kbd&gt;, it exits cleanly.</p>
 </section>
 <section id="some-quick-notes-about-screen">
-<h2 id="some-quick-notes-about-screen">Some quick notes about <cite>screen</cite>:<a class="headerlink" href="#some-quick-notes-about-screen" title="Permalink to this heading">¶</a></h2>
+<h2>Some quick notes about <cite>screen</cite>:<a class="headerlink" href="#some-quick-notes-about-screen" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>detach from session, leaving it running: &lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;d&lt;/kbd&gt;</p></li>
 <li><p>close session, especially if behaving badly: &lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;k&lt;/kbd&gt;, then &lt;kbd&gt;y&lt;/kbd&gt;</p></li>
@@ -572,9 +647,9 @@ using <cite>screen</cite> or <cite>tmux</cite>.</p>
 </section>
 </section>
 <section id="some-developer-notes">
-<h1 id="some-developer-notes">Some developer notes<a class="headerlink" href="#some-developer-notes" title="Permalink to this heading">¶</a></h1>
+<h1>Some developer notes<a class="headerlink" href="#some-developer-notes" title="Permalink to this heading">#</a></h1>
 <section id="requirements">
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h2>
 <p>See requirements.txt.</p>
 <p>The current version has been tested using RPi platforms of armv7l and arm64 variants,
 running python versions 3.7.3, 3.9.2.
@@ -588,7 +663,7 @@ project will explain such setups further if needed.</p>
 databases, and tested with influxd 1.6.4 (hosted on RPi3B with armv7l arch).</p>
 </section>
 <section id="database-setup">
-<h2 id="database-setup">Database setup<a class="headerlink" href="#database-setup" title="Permalink to this heading">¶</a></h2>
+<h2>Database setup<a class="headerlink" href="#database-setup" title="Permalink to this heading">#</a></h2>
 <p>Measurements generated are in sub-tables (influxDB calls these different ‘measurements’):</p>
 <ul class="simple">
 <li><p>rht</p></li>
@@ -601,7 +676,7 @@ databases, and tested with influxd 1.6.4 (hosted on RPi3B with armv7l arch).</p>
 location (e.g. hive number, geographic location) are attached to the injected points.
 In InfluxDB, metadata is called ‘tags’.</p>
 <section id="links-to-docs">
-<h3 id="links-to-docs">## Links to docs<a class="headerlink" href="#links-to-docs" title="Permalink to this heading">¶</a></h3>
+<h3>## Links to docs<a class="headerlink" href="#links-to-docs" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>InfluxDB python client, v2.x (<cite>import influxdb_client.InfluxDBClient</cite>)</dt><dd><ul>
@@ -615,7 +690,7 @@ In InfluxDB, metadata is called ‘tags’.</p>
 </section>
 </section>
 <section id="python-version">
-<h2 id="python-version">Python version<a class="headerlink" href="#python-version" title="Permalink to this heading">¶</a></h2>
+<h2>Python version<a class="headerlink" href="#python-version" title="Permalink to this heading">#</a></h2>
 <p>Due to deployment on resource-limited devices, we avoided using too many recent features of python.
 Much development was validated using python 3.7.3, requires &gt;=3.6
 - requires &gt;=3.6</p>
@@ -636,21 +711,22 @@ Much development was validated using python 3.7.3, requires &gt;=3.6
 </ul>
 </section>
 <section id="some-open-issues">
-<h2 id="some-open-issues">Some open issues<a class="headerlink" href="#some-open-issues" title="Permalink to this heading">¶</a></h2>
+<h2>Some open issues<a class="headerlink" href="#some-open-issues" title="Permalink to this heading">#</a></h2>
 <p>See issue tracker within github repository</p>
 </section>
 <section id="citation">
-<h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permalink to this heading">¶</a></h2>
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this heading">#</a></h2>
 <p>Our article in IEEE Access contains detailed information on the design and
 validation of the robotic system.</p>
 <p>R. Barmak, D.N. Hofstadler, M. Stefanec, L. Piotet, R. Cherfan, T. Schmickl, F.
 Mondada, R. Mills (2024)  “Biohybrid Superorganisms—On the Design of a Robotic
-System for Thermal Interactions With Honeybee Colonies,” in IEEE Access, vol.
-12, pp. 50849-50871, 2024, doi: 10.1109/ACCESS.2024.3385658.</p>
+System for Thermal Interactions With Honeybee Colonies,” in <em>IEEE Access</em>, vol.
+12, pp. 50849-50871, 2024, doi:
+<a class="reference external" href="https://doi.org/10.1109/ACCESS.2024.3385658">10.1109/ACCESS.2024.3385658</a>.</p>
 </section>
 </section>
 <section id="indices-and-tables">
-<h1 id="indices-and-tables">Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
@@ -659,37 +735,146 @@ System for Thermal Interactions With Honeybee Colonies,” in IEEE Access, vol.
 </section>
 
 
-          </article>
-        </div>
-      </div>
-    </main>
-  </div>
-  <footer class="md-footer">
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-          
-          
-        </a>
-        
-      </nav>
-    </div>
-    <div class="md-footer-meta md-typeset">
-      <div class="md-footer-meta__inner md-grid">
-        <div class="md-footer-copyright">
-          <div class="md-footer-copyright__highlight">
-              &#169; Copyright 2024, Rob Mills, Rafael Barmak, Daniel Hofstadler.
+                </article>
               
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Documentation for ho-brood-hostside</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#key-classes">Key classes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libabc-abchandle">libabc – ABCHandle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libabc-exceptions">libabc – exceptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libabc-other-functionality">libabc – other functionality</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#support-classes">Support classes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-brood_hostside.liblog">Logging library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.get_heater_field_keys"><code class="docutils literal notranslate"><span class="pre">get_heater_field_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger"><code class="docutils literal notranslate"><span class="pre">ABCLogger</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.init_logfiles"><code class="docutils literal notranslate"><span class="pre">ABCLogger.init_logfiles()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.reinit"><code class="docutils literal notranslate"><span class="pre">ABCLogger.reinit()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.logline"><code class="docutils literal notranslate"><span class="pre">ABCLogger.logline()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.liblog.ABCLogger.logdatalst"><code class="docutils literal notranslate"><span class="pre">ABCLogger.logdatalst()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-interface-wrappers-libui">User interface wrappers – <strong>libui</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-interaction-libdb">Database interaction – <strong>libdb</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-brood_hostside.libbase">Baseclass – <strong>libbase</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase"><code class="docutils literal notranslate"><span class="pre">ABCBase</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.utcnow"><code class="docutils literal notranslate"><span class="pre">ABCBase.utcnow()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.get_dt_day"><code class="docutils literal notranslate"><span class="pre">ABCBase.get_dt_day()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.dt_to_isofmt"><code class="docutils literal notranslate"><span class="pre">ABCBase.dt_to_isofmt()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.dt_to_unix"><code class="docutils literal notranslate"><span class="pre">ABCBase.dt_to_unix()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.ftime"><code class="docutils literal notranslate"><span class="pre">ABCBase.ftime()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.timestamp4db"><code class="docutils literal notranslate"><span class="pre">ABCBase.timestamp4db()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.parse_boardname"><code class="docutils literal notranslate"><span class="pre">ABCBase.parse_boardname()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.safename"><code class="docutils literal notranslate"><span class="pre">ABCBase.safename()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.lookfor_cfgfile"><code class="docutils literal notranslate"><span class="pre">ABCBase.lookfor_cfgfile()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.ABCBase.git_info_str"><code class="docutils literal notranslate"><span class="pre">ABCBase.git_info_str()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.BackoffCtr"><code class="docutils literal notranslate"><span class="pre">BackoffCtr</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.BackoffCtr.hitok"><code class="docutils literal notranslate"><span class="pre">BackoffCtr.hitok()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brood_hostside.libbase.BackoffCtr.hitwarn"><code class="docutils literal notranslate"><span class="pre">BackoffCtr.hitwarn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-notes-for-library">Usage notes for library</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage-for-prototyping">Basic usage for prototyping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-quick-notes-about-screen">Some quick notes about <cite>screen</cite>:</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-developer-notes">Some developer notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-setup">Database setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-docs">## Links to docs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-version">Python version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-open-issues">Some open issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-            Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
-             and
-            <a href="https://github.com/bashtage/sphinx-material/">Material for
-              Sphinx</a>
-        </div>
-      </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rob Mills, Rafael Barmak, Daniel Hofstadler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Rob Mills, Rafael Barmak, Daniel Hofstadler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
   </footer>
-  <script src="_static/javascripts/application.js"></script>
-  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
   </body>
 </html>
