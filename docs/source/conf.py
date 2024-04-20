@@ -3,7 +3,7 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import sys, os
-import sphinx_rtd_theme
+#import sphinx_rtd_theme
 
 
 sys.path.append(os.path.abspath('../../brood_hostside/'))
@@ -30,7 +30,7 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 #html_theme = 'alabaster'
-#html_theme = 'sphinx-rtd-theme'
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_material'
 
 html_static_path = ['static']

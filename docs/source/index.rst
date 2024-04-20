@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ho-brood-hostside's documentation!
-=============================================
+Documentation for ho-brood-hostside
+===================================
+
 
 .. toctree::
    :maxdepth: 2
@@ -97,6 +98,19 @@ Baseclass -- **libbase**
 .. comment: note that these RST files have their own headers
 .. include:: usage_notes.rst
 .. include:: dev_notes.rst
+
+Citation
+--------
+
+Our article in IEEE Access contains detailed information on the design and 
+validation of the robotic system.
+
+R. Barmak, D.N. Hofstadler, M. Stefanec, L. Piotet, R. Cherfan, T. Schmickl, F.
+Mondada, R. Mills (2024)  "Biohybrid Superorganisms—On the Design of a Robotic
+System for Thermal Interactions With Honeybee Colonies," in IEEE Access, vol.
+12, pp. 50849-50871, 2024, doi: 10.1109/ACCESS.2024.3385658. 
+
+
 
 Indices and tables
 ==================
