@@ -31,6 +31,7 @@ exclude_patterns = []
 
 #html_theme = 'alabaster'
 #html_theme = 'sphinx_rtd_theme'
-html_theme = 'sphinx_material'
+#html_theme = 'sphinx_material'
+html_theme = 'sphinx_book_theme' # this has the ctrl-k search feature.
 
 html_static_path = ['static']

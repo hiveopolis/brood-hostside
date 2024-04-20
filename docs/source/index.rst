@@ -107,8 +107,9 @@ validation of the robotic system.
 
 R. Barmak, D.N. Hofstadler, M. Stefanec, L. Piotet, R. Cherfan, T. Schmickl, F.
 Mondada, R. Mills (2024)  "Biohybrid Superorganisms—On the Design of a Robotic
-System for Thermal Interactions With Honeybee Colonies," in IEEE Access, vol.
-12, pp. 50849-50871, 2024, doi: 10.1109/ACCESS.2024.3385658. 
+System for Thermal Interactions With Honeybee Colonies," in *IEEE Access*, vol.
+12, pp. 50849-50871, 2024, doi: 
+`10.1109/ACCESS.2024.3385658 <https://doi.org/10.1109/ACCESS.2024.3385658>`_. 
 
 
 
