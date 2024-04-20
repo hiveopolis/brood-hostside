@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage notes for library &mdash; ho-brood-hostside  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ho-brood-hostside
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Usage notes for library</a><ul>
+<li><a class="reference internal" href="#basic-usage-for-prototyping">Basic usage for prototyping</a></li>
+<li><a class="reference internal" href="#some-quick-notes-about-screen">Some quick notes about <cite>screen</cite>:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ho-brood-hostside</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Usage notes for library</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/usage_notes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usage-notes-for-library">
+<h1>Usage notes for library<a class="headerlink" href="#usage-notes-for-library" title="Permalink to this heading"></a></h1>
+<p>The package is well managed using systemd service units, and automatic selection
+of configuration files (implemented via hostname lookup).  However, if one
+desires a simpler interaction, e.g. for prototyping a new controller, it is
+possible to run the code directly on a host. For session persistence, we suggest
+using <cite>screen</cite> or <cite>tmux</cite>.</p>
+<section id="basic-usage-for-prototyping">
+<h2>Basic usage for prototyping<a class="headerlink" href="#basic-usage-for-prototyping" title="Permalink to this heading"></a></h2>
+<p>Typically run this inside a screen or tmux session</p>
+<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">#</span> <span class="pre">login</span> <span class="pre">to</span> <span class="pre">host</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">robotic</span> <span class="pre">frame</span> <span class="pre">attached</span>
+<span class="pre">ssh</span> <span class="pre">&lt;hostname&gt;</span>
+<span class="pre">#</span> <span class="pre">start</span> <span class="pre">a</span> <span class="pre">new,</span> <span class="pre">named</span> <span class="pre">screen</span> <span class="pre">session</span>
+<span class="pre">screen</span> <span class="pre">-S</span> <span class="pre">board04</span>
+<span class="pre">#</span> <span class="pre">go</span> <span class="pre">to</span> <span class="pre">runtime</span> <span class="pre">code</span> <span class="pre">directory</span>
+<span class="pre">cd</span> <span class="pre">software/broodnest/runtime_tools</span>
+<span class="pre">python3</span> <span class="pre">abc_read.py</span> <span class="pre">-c</span> <span class="pre">cfg/my_cfg04.cfg</span>
+<span class="pre">`</span></code></p>
+<p>Stop recording with &lt;kbd&gt;ctrl-C&lt;/kbd&gt;, it exits cleanly.</p>
+</section>
+<section id="some-quick-notes-about-screen">
+<h2>Some quick notes about <cite>screen</cite>:<a class="headerlink" href="#some-quick-notes-about-screen" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>detach from session, leaving it running: &lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;d&lt;/kbd&gt;</p></li>
+<li><p>close session, especially if behaving badly: &lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;k&lt;/kbd&gt;, then &lt;kbd&gt;y&lt;/kbd&gt;</p></li>
+<li><p>close session: &lt;kbd&gt;ctrl-D&lt;/kbd&gt; (as per closing any shell)</p></li>
+<li><p>check what sessions are running: <cite>screen -ls</cite></p></li>
+<li><p>reattach to a specific screen session: <cite>screen -r &lt;session name&gt;</cite>, e.g. <cite>screen -r board04</cite></p></li>
+<li><p>reattach to a specific session, if somehow it is still open <cite>screen -Dr &lt;session name&gt;</cite></p></li>
+<li><dl class="simple">
+<dt>scroll up within session (see history!/more than a few lines of error!):</dt><dd><ul>
+<li><p>&lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;q&lt;/kbd&gt;, use mouse wheel or arrow keys.</p></li>
+<li><p>Press &lt;kbd&gt;Esc&lt;/kbd&gt;, to go back to regular mode.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Rob Mills, Rafael Barmak, Daniel Hofstadler.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

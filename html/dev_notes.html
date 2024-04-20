@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Some developer notes &mdash; ho-brood-hostside  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ho-brood-hostside
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Some developer notes</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#database-setup">Database setup</a><ul>
+<li><a class="reference internal" href="#links-to-docs">## Links to docs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#python-version">Python version</a></li>
+<li><a class="reference internal" href="#some-open-issues">Some open issues</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ho-brood-hostside</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Some developer notes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dev_notes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="some-developer-notes">
+<h1>Some developer notes<a class="headerlink" href="#some-developer-notes" title="Permalink to this heading"></a></h1>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<p>See requirements.txt.</p>
+<p>The current version has been tested using RPi platforms of armv7l and arm64 variants,
+running python versions 3.7.3, 3.9.2.
+For database interaction, it has been tested with <cite>influxdb-client==1.36.0</cite> and influx 2.x
+databases.</p>
+<p>The database of influx 2.x has been tested hosted on ubuntu 22.04 servers and on
+RPi4B with arm64 arch. With a 64-bit architecture, a RPi can host both a local
+influx database instance and one or more robots. Other documentation within the
+project will explain such setups further if needed.</p>
+<p>Earlier versions were tested with the client <cite>influxdb==5.2.0</cite> for influx 1.x
+databases, and tested with influxd 1.6.4 (hosted on RPi3B with armv7l arch).</p>
+</section>
+<section id="database-setup">
+<h2>Database setup<a class="headerlink" href="#database-setup" title="Permalink to this heading"></a></h2>
+<p>Measurements generated are in sub-tables (influxDB calls these different ‘measurements’):</p>
+<ul class="simple">
+<li><p>rht</p></li>
+<li><p>temp</p></li>
+<li><p>co2</p></li>
+<li><p>pwr</p></li>
+<li><p>htr</p></li>
+</ul>
+<p>Metadata relating to the robot (e.g. short name, MCU-UUID) and its installation
+location (e.g. hive number, geographic location) are attached to the injected points.
+In InfluxDB, metadata is called ‘tags’.</p>
+<section id="links-to-docs">
+<h3>## Links to docs<a class="headerlink" href="#links-to-docs" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>InfluxDB python client, v2.x (<cite>import influxdb_client.InfluxDBClient</cite>)</dt><dd><ul>
+<li><p><a class="reference external" href="https://github.com/influxdata/influxdb-client-python">Github repo</a></p></li>
+<li><p><a class="reference external" href="https://influxdb-client.readthedocs.io/en/stable/api.html">readthedocs</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+<section id="python-version">
+<h2>Python version<a class="headerlink" href="#python-version" title="Permalink to this heading"></a></h2>
+<p>Due to deployment on resource-limited devices, we avoided using too many recent features of python.
+Much development was validated using python 3.7.3, requires &gt;=3.6
+- requires &gt;=3.6</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>f-strings are used</p></li>
+<li><p>using <cite>timespec</cite> arg in <cite>datetime.datetime.isoformat()</cite></p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>requires &gt;=3.5</dt><dd><ul>
+<li><p>function type hints used in datetime handling</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="some-open-issues">
+<h2>Some open issues<a class="headerlink" href="#some-open-issues" title="Permalink to this heading"></a></h2>
+<p>See issue tracker within github repository</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Rob Mills, Rafael Barmak, Daniel Hofstadler.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
