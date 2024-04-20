@@ -3,6 +3,8 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import sys, os
+import sphinx_rtd_theme
+
 
 sys.path.append(os.path.abspath('../../brood_hostside/'))
 print(sys.path[-1])
@@ -17,7 +19,7 @@ author = 'Rob Mills, Rafael Barmak, Daniel Hofstadler'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions =  ['sphinx.ext.autodoc', 'myst_parser'] 
+extensions =  ['sphinx.ext.autodoc', 'myst_parser', 'sphinx.ext.githubpages'] 
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -31,4 +33,4 @@ exclude_patterns = []
 #html_theme = 'sphinx-rtd-theme'
 html_theme = 'sphinx_rtd_theme'
 
-html_static_path = ['_static']
+html_static_path = ['static']

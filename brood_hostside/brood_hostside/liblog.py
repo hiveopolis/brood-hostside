@@ -5,7 +5,10 @@ from pathlib import Path
 from .libbase import ABCBase
 
 def get_heater_field_keys(n_heaters:int=10) -> list:
-    """Generate the header for the heater csv."""
+    """
+    Generate the header for the heater csv.
+    
+    """
     heater_strs = [f"h{i:02}" for i in range(n_heaters)]
     heater_fields = ['obj', 'status', 'avg_temp', 'pwm', 'is_active']
     heater_header = []
@@ -222,8 +225,7 @@ class ABCLogger(ABCBase):
         - a three-letter code indicating the severity or other info (e.g. ERR)
         - the unix timestamp, in UTC [e.g. 1636149191]
         - a human-readable timestamp (iso8601) [e.g. 2021-11-05T21:53:11Z]
-        - the message itself, which could in principle contain further
-          separators
+        - the message itself, which could in principle contain further separators
 
         """
         # ts = self.dt_to_unix(self.utcnow())

@@ -50,10 +50,12 @@ Python version
 Due to deployment on resource-limited devices, we avoided using too many recent features of python. 
 Much development was validated using python 3.7.3, requires >=3.6
 - requires >=3.6
+
     - f-strings are used
     - using `timespec` arg in `datetime.datetime.isoformat()`
 
 - requires >=3.5
+
     - function type hints used in datetime handling
 
 Some open issues
