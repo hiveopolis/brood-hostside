@@ -40,13 +40,16 @@ jobs:
 
       - name: Install dependencies
         run: python3 -m pip install -r ./requirements.txt
+        working-directory: ./docs
 
-      - run: make html
+      - name: Build docs with sphinx
+        run: make html
       # mkdocs build
+        working-directory: ./docs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          publish_dir: ./docs/build
