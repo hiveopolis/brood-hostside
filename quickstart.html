@@ -288,11 +288,9 @@ document.write(`
 <p>Assuming that you are running the robot in conjunction with a RPi, running raspian or similar:</p>
 <ol class="arabic">
 <li><p>Install binary dependencies</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-numpy
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-numpy
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p>install the package</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>software<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>software
@@ -300,13 +298,21 @@ pip3<span class="w"> </span>install<span class="w"> </span>brood_hostside.tar.gz
 </pre></div>
 </div>
 </li>
-<li><p>edit the example config to match your system</p></li>
+<li><p>edit the example config to match your system</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>cfg/example.cfg
+</pre></div>
+</div>
+</li>
 <li><p>run the sampling-only handler:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>abc_read.py<span class="w"> </span>-c<span class="w"> </span>cfg/example.cfg
 </pre></div>
 </div>
 </li>
-<li><p>or run the actuator-enabled handler:</p></li>
+<li><p>or run the actuator-enabled handler:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>python3<span class="w"> </span>abc_run.py<span class="w"> </span>-c<span class="w"> </span>cfg/example.cfg<span class="sb">`</span>
+</pre></div>
+</div>
+</li>
 </ol>
 </section>
 

@@ -365,11 +365,9 @@ document.write(`
 <p>Assuming that you are running the robot in conjunction with a RPi, running raspian or similar:</p>
 <ol class="arabic">
 <li><p>Install binary dependencies</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-numpy
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-numpy
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p>install the package</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>software<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>software
@@ -377,23 +375,34 @@ pip3<span class="w"> </span>install<span class="w"> </span>brood_hostside.tar.gz
 </pre></div>
 </div>
 </li>
-<li><p>edit the example config to match your system</p></li>
+<li><p>edit the example config to match your system</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>cfg/example.cfg
+</pre></div>
+</div>
+</li>
 <li><p>run the sampling-only handler:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>abc_read.py<span class="w"> </span>-c<span class="w"> </span>cfg/example.cfg
 </pre></div>
 </div>
 </li>
-<li><p>or run the actuator-enabled handler:</p></li>
+<li><p>or run the actuator-enabled handler:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">`</span>python3<span class="w"> </span>abc_run.py<span class="w"> </span>-c<span class="w"> </span>cfg/example.cfg<span class="sb">`</span>
+</pre></div>
+</div>
+</li>
 </ol>
 </section>
 <section id="key-classes">
 <h1>Key classes<a class="headerlink" href="#key-classes" title="Permalink to this heading">#</a></h1>
-<p>NOTE: Currently autodoc is not configured correctly for html build, please refer to the PDF documentation
-which shows the documentation for classes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently autodoc is not configured correctly for html build, please refer to
+the PDF documentation which shows the documentation for classes.</p>
+</div>
 <section id="libabc-abchandle">
 <h2>libabc – ABCHandle<a class="headerlink" href="#libabc-abchandle" title="Permalink to this heading">#</a></h2>
 <p>The primary class used to interact with the broodnest robotic frame is
-<cite>libabc.ABCHandle</cite>.  This provides the top-level entry point to a robot module,
+<code class="docutils literal notranslate"><span class="pre">libabc.ABCHandle</span></code>.  This provides the top-level entry point to a robot module,
 facilitating the acquisition of samples from all sensors, as well as
 configuration, and actuator control.</p>
 </section>
@@ -406,10 +415,10 @@ configuration, and actuator control.</p>
 </section>
 <section id="support-classes">
 <h1>Support classes<a class="headerlink" href="#support-classes" title="Permalink to this heading">#</a></h1>
-<p>The functionality of <cite>brood_hostside</cite> is divided into several modules, which
+<p>The functionality of <code class="docutils literal notranslate"><span class="pre">brood_hostside</span></code> is divided into several modules, which
 implement other classes or supporting functions used to interact with the
 broodnest robotic frame.  Most of these libraries are back-end, instantiated by
-<cite>libabc.ABCHandle</cite>, but users do not need to be overly concerned with the
+<code class="docutils literal notranslate"><span class="pre">libabc.ABCHandle</span></code>, but users do not need to be overly concerned with the
 details.</p>
 <section id="module-brood_hostside.liblog">
 <span id="logging-library"></span><h2>Logging library<a class="headerlink" href="#module-brood_hostside.liblog" title="Permalink to this heading">#</a></h2>
@@ -543,16 +552,18 @@ in the special case of UTC we use the shorter ‘Z’ notation
 <dl class="py method">
 <dt class="sig sig-object py" id="brood_hostside.libbase.ABCBase.parse_boardname">
 <span class="sig-name descname"><span class="pre">parse_boardname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#brood_hostside.libbase.ABCBase.parse_boardname" title="Permalink to this definition">#</a></dt>
-<dd><p>Return the board name from the <cite>addr</cite> string.</p>
-<p>The expected boardname, if udev rules are installed correctly is:
-/dev/abc01 (current version of rules)
-/dev/brood_abc01 (earlier version of rules)</p>
-<p>–&gt; method will yield <cite>abc01</cite></p>
+<dd><p>Return the board name from the <code class="docutils literal notranslate"><span class="pre">addr</span></code> string.</p>
+<p>The expected boardname, if udev rules are installed correctly is:</p>
+<blockquote>
+<div><p>/dev/abc01 (current version of rules)</p>
+</div></blockquote>
+<p>/dev/brood_abc01 (earlier version of rules)</p>
+<p>–&gt; method will yield <code class="docutils literal notranslate"><span class="pre">abc01</span></code></p>
 <p>Without rules implemented, we might also see:
 /dev/ttyACM0 (no rule matching the specific ID installed, linux)</p>
-<p>–&gt; method will yield <cite>ttyACM1</cite></p>
+<p>–&gt; method will yield <code class="docutils literal notranslate"><span class="pre">ttyACM1</span></code></p>
 <p>/dev/cu.usbmodem?? (macOS)</p>
-<p>–&gt; method will yield <cite>cu.usbmodem11</cite></p>
+<p>–&gt; method will yield <code class="docutils literal notranslate"><span class="pre">cu.usbmodem11</span></code></p>
 </dd></dl>
 
 <dl class="py method">
@@ -635,16 +646,16 @@ python3<span class="w"> </span>abc_read.py<span class="w"> </span>-c<span class=
 <section id="some-quick-notes-about-screen">
 <h2>Some quick notes about <cite>screen</cite>:<a class="headerlink" href="#some-quick-notes-about-screen" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>detach from session, leaving it running: &lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;d&lt;/kbd&gt;</p></li>
-<li><p>close session, especially if behaving badly: &lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;k&lt;/kbd&gt;, then &lt;kbd&gt;y&lt;/kbd&gt;</p></li>
-<li><p>close session: &lt;kbd&gt;ctrl-D&lt;/kbd&gt; (as per closing any shell)</p></li>
-<li><p>check what sessions are running: <cite>screen -ls</cite></p></li>
-<li><p>reattach to a specific screen session: <cite>screen -r &lt;session name&gt;</cite>, e.g. <cite>screen -r board04</cite></p></li>
-<li><p>reattach to a specific session, if somehow it is still open <cite>screen -Dr &lt;session name&gt;</cite></p></li>
+<li><p>detach from session, leaving it running: <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd>, <kbd class="kbd docutils literal notranslate">d</kbd></p></li>
+<li><p>close session, especially if behaving badly: <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd>, <kbd class="kbd docutils literal notranslate">k</kbd>, then <kbd class="kbd docutils literal notranslate">y</kbd></p></li>
+<li><p>close session: <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">D</kbd></kbd> (as per closing any shell)</p></li>
+<li><p>check what sessions are running: <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-ls</span></code></p></li>
+<li><p>reattach to a specific screen session: <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-r</span> <span class="pre">&lt;session</span> <span class="pre">name&gt;</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-r</span> <span class="pre">board04</span></code></p></li>
+<li><p>reattach to a specific session, if somehow it is still open <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-Dr</span> <span class="pre">&lt;session</span> <span class="pre">name&gt;</span></code></p></li>
 <li><dl class="simple">
 <dt>scroll up within session (see history!/more than a few lines of error!):</dt><dd><ul>
-<li><p>&lt;kbd&gt;ctrl-A&lt;/kbd&gt;, &lt;kbd&gt;q&lt;/kbd&gt;, use mouse wheel or arrow keys.</p></li>
-<li><p>Press &lt;kbd&gt;Esc&lt;/kbd&gt;, to go back to regular mode.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd>, <kbd class="kbd docutils literal notranslate">q</kbd>,  use mouse wheel or arrow keys.</p></li>
+<li><p>Press <kbd class="kbd docutils literal notranslate">Esc</kbd> to go back to regular mode.</p></li>
 </ul>
 </dd>
 </dl>
@@ -726,8 +737,8 @@ Much development was validated using python 3.7.3, requires &gt;=3.6</p>
 <p>Our article in IEEE Access contains detailed information on the design and
 validation of the robotic system.</p>
 <p>R. Barmak, D.N. Hofstadler, M. Stefanec, L. Piotet, R. Cherfan, T. Schmickl, F.
-Mondada, R. Mills (2024)  “Biohybrid Superorganisms—On the Design of a Robotic
-System for Thermal Interactions With Honeybee Colonies,” in <em>IEEE Access</em>, vol.
+Mondada, R. Mills (2024)  “<strong>Biohybrid Superorganisms—On the Design of a Robotic
+System for Thermal Interactions With Honeybee Colonies,</strong>” in <em>IEEE Access</em>, vol.
 12, pp. 50849-50871, 2024, doi:
 <a class="reference external" href="https://doi.org/10.1109/ACCESS.2024.3385658">10.1109/ACCESS.2024.3385658</a>.</p>
 </section>

@@ -30,17 +30,16 @@ Stop recording with :kbd:`ctrl-C`, it exits cleanly.
 Some quick notes about `screen`:
 --------------------------------
 
+* detach from session, leaving it running: :kbd:`ctrl-A`, :kbd:`d` 
+* close session, especially if behaving badly: :kbd:`ctrl-A`, :kbd:`k`, then :kbd:`y` 
+* close session: :kbd:`ctrl-D` (as per closing any shell)
 
-* detach from session, leaving it running: <kbd>ctrl-A</kbd>, <kbd>d</kbd>
-* close session, especially if behaving badly: <kbd>ctrl-A</kbd>, <kbd>k</kbd>, then <kbd>y</kbd>
-* close session: <kbd>ctrl-D</kbd> (as per closing any shell)
-
-* check what sessions are running: `screen -ls`
-* reattach to a specific screen session: `screen -r <session name>`, e.g. `screen -r board04`
-* reattach to a specific session, if somehow it is still open `screen -Dr <session name>`
+* check what sessions are running: ``screen -ls``
+* reattach to a specific screen session: ``screen -r <session name>``, e.g. ``screen -r board04``
+* reattach to a specific session, if somehow it is still open ``screen -Dr <session name>``
 
 * scroll up within session (see history!/more than a few lines of error!):
-     * <kbd>ctrl-A</kbd>, <kbd>q</kbd>, use mouse wheel or arrow keys. 
-     * Press <kbd>Esc</kbd>, to go back to regular mode.
+   * :kbd:`ctrl-A`, :kbd:`q`,  use mouse wheel or arrow keys. 
+   * Press :kbd:`Esc` to go back to regular mode.
 
 

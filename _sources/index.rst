@@ -16,14 +16,16 @@ Documentation for ho-brood-hostside
 Key classes
 ===========
 
-NOTE: Currently autodoc is not configured correctly for html build, please refer to the PDF documentation 
-which shows the documentation for classes.
+.. note:: 
+   
+   Currently autodoc is not configured correctly for html build, please refer to
+   the PDF documentation which shows the documentation for classes.
 
 libabc -- ABCHandle
 -------------------
 
 The primary class used to interact with the broodnest robotic frame is
-`libabc.ABCHandle`.  This provides the top-level entry point to a robot module,
+``libabc.ABCHandle``.  This provides the top-level entry point to a robot module,
 facilitating the acquisition of samples from all sensors, as well as
 configuration, and actuator control. 
 
@@ -60,10 +62,10 @@ libabc -- other functionality
 Support classes
 ===============
 
-The functionality of `brood_hostside` is divided into several modules, which
+The functionality of ``brood_hostside`` is divided into several modules, which
 implement other classes or supporting functions used to interact with the
 broodnest robotic frame.  Most of these libraries are back-end, instantiated by
-`libabc.ABCHandle`, but users do not need to be overly concerned with the 
+``libabc.ABCHandle``, but users do not need to be overly concerned with the 
 details. 
 
 Logging library
@@ -109,8 +111,8 @@ Our article in IEEE Access contains detailed information on the design and
 validation of the robotic system.
 
 R. Barmak, D.N. Hofstadler, M. Stefanec, L. Piotet, R. Cherfan, T. Schmickl, F.
-Mondada, R. Mills (2024)  "Biohybrid Superorganisms—On the Design of a Robotic
-System for Thermal Interactions With Honeybee Colonies," in *IEEE Access*, vol.
+Mondada, R. Mills (2024)  "**Biohybrid Superorganisms—On the Design of a Robotic
+System for Thermal Interactions With Honeybee Colonies,**" in *IEEE Access*, vol.
 12, pp. 50849-50871, 2024, doi: 
 `10.1109/ACCESS.2024.3385658 <https://doi.org/10.1109/ACCESS.2024.3385658>`_. 
 
