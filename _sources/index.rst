@@ -19,7 +19,9 @@ Key classes
 .. note:: 
    
    Currently autodoc is not configured correctly for html build, please refer to
-   the PDF documentation which shows the documentation for classes.
+   the `PDF documentation <https://github.com/hiveopolis/brood-hostside/blob/main/brood_hostside/docs/ho-brood-hostside.pdf>`_ 
+   which shows the documentation for classes.
+
 
 libabc -- ABCHandle
 -------------------
