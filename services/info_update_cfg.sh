@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Use this in conjunction with `schedule_evt.sh`
+#
+# NOTE: should have OK_WEBHOOK_URL defined in the environment
 
 # Example:
 # bash schedule_evt.sh "2023-01-13 23:59:00" "bash update_cfg.sh"
@@ -51,7 +53,6 @@ sudo systemctl restart abc_run.service >> "${fn_sysdlog}"
 echo -e "\nRestarted abc_run.service.\n\n" >> "${fn_sysdlog}"
 sudo systemctl status -l abc_run.service >> "${fn_sysdlog}"
 
-ok_webhook_url=https://discord.com/api/webhooks/1066791968618856498/_vLsOYyO-4sNkJb_QPLbqQiYpeCK-Ud7sjM1ENQG_i1HeEAKMnQoMYHFCuoFdIsFviaR
 
 text="[I] config updated (branch: ${br}). $(hostname). ${timestamp}"
 t2="$0 -> ${hash}"
@@ -59,10 +60,15 @@ t2="$0 -> ${hash}"
 msg=$(generate_post_data "$text" "$t2")
 echo "[D] the message to transmit is: \n\t${msg}"
 
-# POST request to Discord Webhook
-curl -H "Content-Type: application/json" -X POST -d "${msg}" $ok_webhook_url
-rv=$?
-echo "[I] curl push: $?"
+if [[ ! -z "${OK_WEBHOOK_URL}" ]]; then
+    # webhook defined, let's send
+    # POST request to Discord Webhook
+    curl -H "Content-Type: application/json" -X POST -d "${msg}" $OK_WEBHOOK_URL
+    rv=$?
+    echo "[I] curl push: $?"
+fi
+
+
 
 
 
