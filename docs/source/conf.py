@@ -19,7 +19,7 @@ author = 'Rob Mills, Rafael Barmak, Daniel Hofstadler'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions =  ['sphinx.ext.autodoc', 'myst_parser', 'sphinx.ext.githubpages'] 
+extensions =  ['sphinx.ext.autodoc', 'myst_parser', 'sphinx.ext.githubpages', 'sphinx_copybutton'] 
 
 templates_path = ['_templates']
 exclude_patterns = []

@@ -36,7 +36,7 @@ class ABCBase(object):
     def _clean_datetime(self, t_str: str,
                         utc: bool = True,
                         fmt: str = _fmt_abc_re) -> datetime:
-        """Clean and convert sample date & time.
+        """Clean and convert sample date and time. 
 
         If UTC is false, do not set tzinfo.
 
