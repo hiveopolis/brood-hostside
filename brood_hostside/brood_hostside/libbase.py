@@ -149,22 +149,23 @@ class ABCBase(object):
         return self.hiveloc, self.hive_num, self.rpi_num
 
     def parse_boardname(self, addr: str) -> str:
-        """Return the board name from the `addr` string.
+        """Return the board name from the ``addr`` string.
 
         The expected boardname, if udev rules are installed correctly is:
-        /dev/abc01 (current version of rules)
+
+           /dev/abc01 (current version of rules)
         /dev/brood_abc01 (earlier version of rules)
 
-        --> method will yield `abc01`
+        --> method will yield ``abc01``
 
         Without rules implemented, we might also see:
         /dev/ttyACM0 (no rule matching the specific ID installed, linux)
 
-        --> method will yield `ttyACM1`
+        --> method will yield ``ttyACM1``
 
         /dev/cu.usbmodem?? (macOS)
 
-        --> method will yield `cu.usbmodem11`
+        --> method will yield ``cu.usbmodem11``
 
         """
         # NOTE: This is a choice to be verified with others!
