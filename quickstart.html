@@ -31,6 +31,7 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
@@ -40,6 +41,8 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'quickstart';</script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -283,27 +286,34 @@ document.write(`
   <section id="quickstart">
 <h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h1>
 <p>Assuming that you are running the robot in conjunction with a RPi, running raspian or similar:</p>
-<ol class="arabic simple">
-<li><p>Install binary dependencies</p></li>
-</ol>
-<p><cite>sudo apt install python3-numpy</cite></p>
-<ol class="arabic simple" start="2">
-<li><p>install the package</p></li>
-</ol>
-<p><cite>mkdir software &amp;&amp; cd software</cite>
+<ol class="arabic">
+<li><p>Install binary dependencies</p>
+<blockquote>
+<div><p><cite>sudo apt install python3-numpy</cite></p>
+</div></blockquote>
+</li>
+<li><p>install the package</p>
+<blockquote>
+<div><p><cite>mkdir software &amp;&amp; cd software</cite>
 <cite>pip3 install brood_hostside.tar.gz</cite></p>
-<ol class="arabic simple" start="3">
-<li><p>edit the example config to match your system</p></li>
+</div></blockquote>
+</li>
+<li><p>edit the example config to match your system</p>
+<blockquote>
+<div><p><cite>nano cfg/example.cfg</cite></p>
+</div></blockquote>
+</li>
+<li><p>run the sampling-only handler:</p>
+<blockquote>
+<div><p><cite>python3 abc_read.py -c cfg/example.cfg</cite></p>
+</div></blockquote>
+</li>
+<li><p>or run the actuator-enabled handler:</p>
+<blockquote>
+<div><p><cite>python3 abc_run.py -c cfg/example.cfg</cite></p>
+</div></blockquote>
+</li>
 </ol>
-<p><cite>nano cfg/example.cfg</cite></p>
-<ol class="arabic simple" start="4">
-<li><p>run the sampling-only handler:</p></li>
-</ol>
-<p><cite>python3 abc_read.py -c cfg/example.cfg</cite></p>
-<ol class="arabic simple" start="5">
-<li><p>or run the actuator-enabled handler:</p></li>
-</ol>
-<p><cite>python3 abc_run.py -c cfg/example.cfg</cite></p>
 </section>
 
 
