@@ -304,6 +304,15 @@ using <cite>screen</cite> or <cite>tmux</cite>.</p>
 <section id="basic-usage-for-prototyping">
 <h2>Basic usage for prototyping<a class="headerlink" href="#basic-usage-for-prototyping" title="Permalink to this heading">#</a></h2>
 <p>Typically run this inside a screen or tmux session</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># login to host with the robotic frame attached</span>
+ssh<span class="w"> </span>&lt;hostname&gt;
+<span class="c1"># start a new, named screen session</span>
+screen<span class="w"> </span>-S<span class="w"> </span>board04
+<span class="c1"># go to runtime code directory</span>
+<span class="nb">cd</span><span class="w"> </span>software/broodnest/runtime_tools
+python3<span class="w"> </span>abc_read.py<span class="w"> </span>-c<span class="w"> </span>cfg/my_cfg04.cfg
+</pre></div>
+</div>
 <p>Stop recording with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd>, it exits cleanly.</p>
 </section>
 <section id="some-quick-notes-about-screen">

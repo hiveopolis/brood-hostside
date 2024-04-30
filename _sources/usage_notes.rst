@@ -13,7 +13,7 @@ Basic usage for prototyping
 
 Typically run this inside a screen or tmux session
 
-.. code-block: bash 
+.. code-block:: bash 
 
      # login to host with the robotic frame attached
      ssh <hostname> 

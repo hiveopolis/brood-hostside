@@ -366,35 +366,30 @@ document.write(`
 <ol class="arabic">
 <li><p>Install binary dependencies</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-numpy</span></code></p>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-numpy
+</pre></div>
+</div>
 </div></blockquote>
 </li>
 <li><p>install the package</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">software</span> <span class="pre">&amp;&amp;</span> <span class="pre">cd</span> <span class="pre">software</span></code>
-<code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">brood_hostside.tar.gz</span></code></p>
-</div></blockquote>
-</li>
-<li><p>edit the example config to match your system</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">cfg/example.cfg</span></code></p>
-</div></blockquote>
-</li>
-<li><p>run the sampling-only handler:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">abc_read</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="n">cfg</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">cfg</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>software<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>software
+pip3<span class="w"> </span>install<span class="w"> </span>brood_hostside.tar.gz
 </pre></div>
 </div>
-<ol class="arabic" start="5">
-<li><p>or run the actuator-enabled handler:</p>
-<blockquote>
-<div><p><cite>python3 abc_run.py -c cfg/example.cfg</cite></p>
-</div></blockquote>
 </li>
+<li><p>edit the example config to match your system</p></li>
+<li><p>run the sampling-only handler:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>abc_read.py<span class="w"> </span>-c<span class="w"> </span>cfg/example.cfg
+</pre></div>
+</div>
+</li>
+<li><p>or run the actuator-enabled handler:</p></li>
 </ol>
 </section>
 <section id="key-classes">
 <h1>Key classes<a class="headerlink" href="#key-classes" title="Permalink to this heading">#</a></h1>
+<p>NOTE: Currently autodoc is not configured correctly for html build, please refer to the PDF documentation
+which shows the documentation for classes.</p>
 <section id="libabc-abchandle">
 <h2>libabc – ABCHandle<a class="headerlink" href="#libabc-abchandle" title="Permalink to this heading">#</a></h2>
 <p>The primary class used to interact with the broodnest robotic frame is
@@ -626,6 +621,15 @@ using <cite>screen</cite> or <cite>tmux</cite>.</p>
 <section id="basic-usage-for-prototyping">
 <h2>Basic usage for prototyping<a class="headerlink" href="#basic-usage-for-prototyping" title="Permalink to this heading">#</a></h2>
 <p>Typically run this inside a screen or tmux session</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># login to host with the robotic frame attached</span>
+ssh<span class="w"> </span>&lt;hostname&gt;
+<span class="c1"># start a new, named screen session</span>
+screen<span class="w"> </span>-S<span class="w"> </span>board04
+<span class="c1"># go to runtime code directory</span>
+<span class="nb">cd</span><span class="w"> </span>software/broodnest/runtime_tools
+python3<span class="w"> </span>abc_read.py<span class="w"> </span>-c<span class="w"> </span>cfg/my_cfg04.cfg
+</pre></div>
+</div>
 <p>Stop recording with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd>, it exits cleanly.</p>
 </section>
 <section id="some-quick-notes-about-screen">
@@ -695,21 +699,21 @@ In InfluxDB, metadata is called ‘tags’.</p>
 <h2>Python version<a class="headerlink" href="#python-version" title="Permalink to this heading">#</a></h2>
 <p>Due to deployment on resource-limited devices, we avoided using too many recent features of python.
 Much development was validated using python 3.7.3, requires &gt;=3.6</p>
-<ul>
-<li><p>requires &gt;=3.6</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
+<li><dl class="simple">
+<dt>requires &gt;=3.6</dt><dd><ul>
 <li><p>f-strings are used</p></li>
 <li><p>using <cite>timespec</cite> arg in <cite>datetime.datetime.isoformat()</cite></p></li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
 </li>
-<li><p>requires &gt;=3.5</p>
-<blockquote>
-<div><ul class="simple">
+<li><dl class="simple">
+<dt>requires &gt;=3.5</dt><dd><ul>
 <li><p>function type hints used in datetime handling</p></li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
 </li>
 </ul>
 </section>
