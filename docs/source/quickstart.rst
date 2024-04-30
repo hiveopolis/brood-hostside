@@ -32,4 +32,4 @@ Assuming that you are running the robot in conjunction with a RPi, running raspi
 
    .. code-block:: bash
 
-        `python3 abc_run.py -c cfg/example.cfg`
+       python3 abc_run.py -c cfg/example.cfg
