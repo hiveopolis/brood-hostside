@@ -13,17 +13,18 @@ Basic usage for prototyping
 
 Typically run this inside a screen or tmux session
 
-```bash
-# login to host with the robotic frame attached
-ssh <hostname> 
-# start a new, named screen session
-screen -S board04
-# go to runtime code directory
-cd software/broodnest/runtime_tools
-python3 abc_read.py -c cfg/my_cfg04.cfg
-```
+.. code-block: bash 
 
-Stop recording with <kbd>ctrl-C</kbd>, it exits cleanly.
+     # login to host with the robotic frame attached
+     ssh <hostname> 
+     # start a new, named screen session
+     screen -S board04
+     # go to runtime code directory
+     cd software/broodnest/runtime_tools
+     python3 abc_read.py -c cfg/my_cfg04.cfg
+
+
+Stop recording with :kbd:`ctrl-C`, it exits cleanly.
 
 
 Some quick notes about `screen`:

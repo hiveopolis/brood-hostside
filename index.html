@@ -366,25 +366,26 @@ document.write(`
 <ol class="arabic">
 <li><p>Install binary dependencies</p>
 <blockquote>
-<div><p><cite>sudo apt install python3-numpy</cite></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-numpy</span></code></p>
 </div></blockquote>
 </li>
 <li><p>install the package</p>
 <blockquote>
-<div><p><cite>mkdir software &amp;&amp; cd software</cite>
-<cite>pip3 install brood_hostside.tar.gz</cite></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">software</span> <span class="pre">&amp;&amp;</span> <span class="pre">cd</span> <span class="pre">software</span></code>
+<code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">brood_hostside.tar.gz</span></code></p>
 </div></blockquote>
 </li>
 <li><p>edit the example config to match your system</p>
 <blockquote>
-<div><p><cite>nano cfg/example.cfg</cite></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">cfg/example.cfg</span></code></p>
 </div></blockquote>
 </li>
-<li><p>run the sampling-only handler:</p>
-<blockquote>
-<div><p><cite>python3 abc_read.py -c cfg/example.cfg</cite></p>
-</div></blockquote>
-</li>
+<li><p>run the sampling-only handler:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">abc_read</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="n">cfg</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">cfg</span>
+</pre></div>
+</div>
+<ol class="arabic" start="5">
 <li><p>or run the actuator-enabled handler:</p>
 <blockquote>
 <div><p><cite>python3 abc_run.py -c cfg/example.cfg</cite></p>
@@ -625,16 +626,7 @@ using <cite>screen</cite> or <cite>tmux</cite>.</p>
 <section id="basic-usage-for-prototyping">
 <h2>Basic usage for prototyping<a class="headerlink" href="#basic-usage-for-prototyping" title="Permalink to this heading">#</a></h2>
 <p>Typically run this inside a screen or tmux session</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">#</span> <span class="pre">login</span> <span class="pre">to</span> <span class="pre">host</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">robotic</span> <span class="pre">frame</span> <span class="pre">attached</span>
-<span class="pre">ssh</span> <span class="pre">&lt;hostname&gt;</span>
-<span class="pre">#</span> <span class="pre">start</span> <span class="pre">a</span> <span class="pre">new,</span> <span class="pre">named</span> <span class="pre">screen</span> <span class="pre">session</span>
-<span class="pre">screen</span> <span class="pre">-S</span> <span class="pre">board04</span>
-<span class="pre">#</span> <span class="pre">go</span> <span class="pre">to</span> <span class="pre">runtime</span> <span class="pre">code</span> <span class="pre">directory</span>
-<span class="pre">cd</span> <span class="pre">software/broodnest/runtime_tools</span>
-<span class="pre">python3</span> <span class="pre">abc_read.py</span> <span class="pre">-c</span> <span class="pre">cfg/my_cfg04.cfg</span>
-<span class="pre">`</span></code></p>
-<p>Stop recording with &lt;kbd&gt;ctrl-C&lt;/kbd&gt;, it exits cleanly.</p>
+<p>Stop recording with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd>, it exits cleanly.</p>
 </section>
 <section id="some-quick-notes-about-screen">
 <h2>Some quick notes about <cite>screen</cite>:<a class="headerlink" href="#some-quick-notes-about-screen" title="Permalink to this heading">#</a></h2>
@@ -702,15 +694,16 @@ In InfluxDB, metadata is called ‘tags’.</p>
 <section id="python-version">
 <h2>Python version<a class="headerlink" href="#python-version" title="Permalink to this heading">#</a></h2>
 <p>Due to deployment on resource-limited devices, we avoided using too many recent features of python.
-Much development was validated using python 3.7.3, requires &gt;=3.6
-- requires &gt;=3.6</p>
+Much development was validated using python 3.7.3, requires &gt;=3.6</p>
+<ul>
+<li><p>requires &gt;=3.6</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>f-strings are used</p></li>
 <li><p>using <cite>timespec</cite> arg in <cite>datetime.datetime.isoformat()</cite></p></li>
 </ul>
 </div></blockquote>
-<ul>
+</li>
 <li><p>requires &gt;=3.5</p>
 <blockquote>
 <div><ul class="simple">
