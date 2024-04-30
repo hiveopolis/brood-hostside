@@ -16,6 +16,9 @@ Documentation for ho-brood-hostside
 Key classes
 ===========
 
+NOTE: Currently autodoc is not configured correctly for html build, please refer to the PDF documentation 
+which shows the documentation for classes.
+
 libabc -- ABCHandle
 -------------------
 

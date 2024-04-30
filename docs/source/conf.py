@@ -24,7 +24,8 @@ extensions =  ['sphinx.ext.autodoc', 'myst_parser', 'sphinx.ext.githubpages', 's
 templates_path = ['_templates']
 exclude_patterns = []
 
-
+# configure the code highlighting
+pygments_style = 'sphinx'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
