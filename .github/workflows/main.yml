@@ -39,8 +39,15 @@ jobs:
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        run: python3 -m pip install -r ./requirements_docbuild.txt
+        run: | 
+          python3 -m pip install -r ./requirements_docbuild.txt
+          python3 -m pip install numpy>=1.20 
         working-directory: ./docs
+
+      - name: Install brood-hostside (so autodocs build)
+        run: | 
+          python3 -m pip install -e .
+        working-directory: ./brood_hostside
 
       - name: Build docs with sphinx
         run: make html
