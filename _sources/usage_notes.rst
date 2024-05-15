@@ -38,7 +38,7 @@ Some quick notes about `screen`:
 * reattach to a specific screen session: ``screen -r <session name>``, e.g. ``screen -r board04``
 * reattach to a specific session, if somehow it is still open ``screen -Dr <session name>``
 
-* scroll up within session (see history!/more than a few lines of error!):
+* scroll up within session (see history/more than a few lines of error!):
    * :kbd:`ctrl-A`, :kbd:`q`,  use mouse wheel or arrow keys. 
    * Press :kbd:`Esc` to go back to regular mode.
 

@@ -107,7 +107,7 @@ Baseclass -- **libbase**
 .. include:: dev_notes.rst
 
 Citation
---------
+========
 
 Our article in IEEE Access contains detailed information on the design and 
 validation of the robotic system.
