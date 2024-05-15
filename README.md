@@ -6,7 +6,7 @@ Code to manage the hiveopolis ABC broodnest system - control, config, logging
 
 * the ABC comb firmware runs a micropython interface (with other chibiOS RTOS
   threads in the background to handle all the sensors and actuators).
-* to obtain current status we use the library `pyboard`.
+* to obtain current status and control actuators we use the library `pyboard`.
 
 * the script `abc_read` is the key entry point to all sampling, without
   actuation.  It is parameterised by a config file, which is passed on the
@@ -20,8 +20,8 @@ Code to manage the hiveopolis ABC broodnest system - control, config, logging
   * `<node_name>_<date>.log` --> transcript of activity at various levels of
     logging.
 
-* All boards have a unique serial in their USB attributes, allowing the udev
-  rules to generate symlinks for repeatable access to the same board (see
+* All nodes have a unique serial in their USB attributes, allowing the udev
+  rules to generate symlinks for repeatable access to the same node (see
  `udev/` subdir)
 
 

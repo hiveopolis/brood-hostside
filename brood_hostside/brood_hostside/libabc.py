@@ -333,10 +333,9 @@ class ABCHandle(ABCBase):
         - set each individual objective to `heater_def_tmp` (typically 0'C)
         - enable the global heater thread
 
-        if `activate_any` is set:
-        - for each entry in `self.activate_heaters`, 
-           - set objective 
-           - activate that heater
+        if `activate_any` is set, for each entry in `self.activate_heaters`:
+        - set objective 
+        - activate that heater
         
         '''
         # Enable heaters
@@ -1900,8 +1899,9 @@ class ABCHandle(ABCBase):
 
         Returns: Datetime object = RTC time
 
-        `bytestring e.g.: b'$$2021,11,5*$17,3,11**\r\n'`
-        `decoded ->        '$$2021,11,5*$17,3,11**'`
+        ``bytestring e.g.: b'$$2021,11,5*$17,3,11**\r\n'`` 
+        ``decoded ->        '$$2021,11,5*$17,3,11**'`` 
+
         """
         if self.upy_status is False:
             self.upy_ini()

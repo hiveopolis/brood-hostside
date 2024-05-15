@@ -99,9 +99,10 @@ class ABCBase(object):
 
         - dt should be tz-aware
         - output will be of the form
-        2021-08-12T12:43:05+01:00
-        in the special case of UTC we use the shorter 'Z' notation
-        2021-08-12T11:43:05Z
+
+          - ``2021-08-12T12:43:05+01:00``
+          - in the special case of UTC we use the shorter 'Z' notation
+          - ``2021-08-12T11:43:05Z``
         """
         t_str = dt.isoformat(timespec="seconds")
         if abbrev_utc:
@@ -131,7 +132,7 @@ class ABCBase(object):
         """Convert datetime to influxDB-format.
 
         Assumes input of a TZ-aware datetime object
-         a unix timestamp (sec since 1970),
+        a unix timestamp (sec since 1970),
         generates UTC timestamp of iso-8601 format"""
         # NOTE: If libabc is used, the time set on the ABC is in UTC!
         dt = datetime.fromtimestamp(ts, timezone.utc)
@@ -154,7 +155,7 @@ class ABCBase(object):
         The expected boardname, if udev rules are installed correctly is:
 
            /dev/abc01 (current version of rules)
-        /dev/brood_abc01 (earlier version of rules)
+           /dev/brood_abc01 (earlier version of rules)
 
         --> method will yield ``abc01``
 

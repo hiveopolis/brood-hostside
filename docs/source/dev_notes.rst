@@ -4,12 +4,16 @@ Some developer notes
 Requirements
 ------------
 
-See requirements.txt.
+The python packages required are defined in `setup.py``:
+
+- pyserial (note: NOT `serial`; both are used as `import serial`, confusingly)
+- influxdb-client
+- numpy 
 
 The current version has been tested using RPi platforms of armv7l and arm64 variants,
 running python versions 3.7.3, 3.9.2. 
-For database interaction, it has been tested with `influxdb-client==1.36.0` and influx 2.x
-databases.
+For database interaction, it has been tested with `influxdb-client==1.36.0` and
+influx 2.x databases.
 
 
 The database of influx 2.x has been tested hosted on ubuntu 22.04 servers and on
@@ -26,15 +30,15 @@ Database setup
 
 Measurements generated are in sub-tables (influxDB calls these different 'measurements'):
 
-* rht
-* temp
-* co2
-* pwr
-* htr
++-------+-------+-------+-------+-------+
+|  rht  | temp  |  co2  |  pwr  |  htr  |
++-------+-------+-------+-------+-------+
 
 Metadata relating to the robot (e.g. short name, MCU-UUID) and its installation
 location (e.g. hive number, geographic location) are attached to the injected points.
-In InfluxDB, metadata is called 'tags'.
+In InfluxDB, metadata is called 'tags'. The cardinality of the unique tag combinations,
+but not the number of tags, affects the performance of the database -- so more tags 
+does not inherently mean worse performance. See influxDB docs for more details.
 
 
 ## Links to docs
