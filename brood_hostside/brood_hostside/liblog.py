@@ -29,13 +29,13 @@ class ABCLogger(ABCBase):
     E.g., on hive5-rpi4, which controls the ABC board 'abc08', today,
     these 7 files are produced upon initialization of an ABCLogger:
 
-        abc08_2021-11-04.dbg
-        abc08_2021-11-04.log
-        abc08_co2_2021-11-04.csv
-        abc08_htr_2021-11-04.csv
-        abc08_pwr_2021-11-04.csv
-        abc08_rht_2021-11-04.csv
-        abc08_tmp_2021-11-04.csv
+    -   abc08_2021-11-04.dbg
+    -   abc08_2021-11-04.log
+    -   abc08_co2_2021-11-04.csv
+    -   abc08_htr_2021-11-04.csv
+    -   abc08_pwr_2021-11-04.csv
+    -   abc08_rht_2021-11-04.csv
+    -   abc08_tmp_2021-11-04.csv
 
     If the files exist, they will be appended to; if not, they are
     created. New CSV files are initialized with a header.

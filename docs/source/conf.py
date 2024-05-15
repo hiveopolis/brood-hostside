@@ -4,7 +4,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import sys, os
 #import sphinx_rtd_theme
-
+from brood_hostside import __version__
 
 sys.path.append(os.path.abspath('../../brood_hostside/'))
 print(sys.path[-1])
@@ -15,6 +15,10 @@ print(sys.path[-1])
 project = 'ho-brood-hostside'
 copyright = '2024, Rob Mills, Rafael Barmak, Daniel Hofstadler'
 author = 'Rob Mills, Rafael Barmak, Daniel Hofstadler'
+_v = ".".join(__version__.split('.')[0:2])  # just use major.minor
+version = _v 
+release = _v
+
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

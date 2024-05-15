@@ -41,8 +41,8 @@ but not the number of tags, affects the performance of the database -- so more t
 does not inherently mean worse performance. See influxDB docs for more details.
 
 
-## Links to docs
-^^^^^^^^^^^^^^^^
+Links to docs
+^^^^^^^^^^^^^
 
 * InfluxDB python client, v2.x (`import influxdb_client.InfluxDBClient`)
     * `Github repo <https://github.com/influxdata/influxdb-client-python>`_
