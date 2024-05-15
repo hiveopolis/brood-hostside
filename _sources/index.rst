@@ -16,12 +16,6 @@ Documentation for ho-brood-hostside
 Key classes
 ===========
 
-.. note:: 
-   
-   Currently autodoc is not configured correctly for html build, please refer to
-   the `PDF documentation <https://github.com/hiveopolis/brood-hostside/blob/main/brood_hostside/docs/ho-brood-hostside.pdf>`_ 
-   which shows the documentation for classes.
-
 
 libabc -- ABCHandle
 -------------------
@@ -70,10 +64,10 @@ broodnest robotic frame.  Most of these libraries are back-end, instantiated by
 ``libabc.ABCHandle``, but users do not need to be overly concerned with the 
 details. 
 
-Logging library
----------------
+Database interaction -- **libdb**
+---------------------------------
 
-.. automodule:: brood_hostside.liblog
+.. automodule:: brood_hostside.libdb
    :members:
    :member-order: bysource
 
@@ -81,17 +75,18 @@ Logging library
 User interface wrappers -- **libui**
 ------------------------------------
 
-
 .. automodule:: brood_hostside.libui
    :members:
    :member-order: bysource
 
-Database interaction -- **libdb**
----------------------------------
 
-.. automodule:: brood_hostside.libdb
+Logging library
+---------------
+
+.. automodule:: brood_hostside.liblog
    :members:
    :member-order: bysource
+
 
 Baseclass -- **libbase**
 ------------------------
